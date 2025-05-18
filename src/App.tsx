@@ -1,12 +1,8 @@
-import React from "react";
-import QuizApp from "./components/quizapp";
-
 function App() {
   return (
-    <div className="App">
-      <QuizApp />
+    <div>
+      <h1>Hello, world!</h1> {/* ← 何か表示される内容があるか */}
     </div>
   );
 }
-
 export default App;
