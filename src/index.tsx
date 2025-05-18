@@ -1,13 +1,14 @@
-// index.tsx または main.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom'; // ← ✅ これを使っているか？
 import App from './App';
+import { HashRouter } from 'react-router-dom'; // ← これを使う！
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 root.render(
   <React.StrictMode>
-    <HashRouter> {/* ✅ BrowserRouter ではダメ */}
+    <HashRouter> {/* ← ここも変更 */}
       <App />
     </HashRouter>
   </React.StrictMode>
